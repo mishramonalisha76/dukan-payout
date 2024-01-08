@@ -14,11 +14,11 @@ export const Overview = () => {
       <div className="flex w-full gap-5">
         <div className=" bg-white flex flex-col gap-[16px] p-[20px] w-full rounded-[8px]  shadow-sm">
           <p className="text-[#4d4d4d]">Online Orders</p>
-          <p className="text-2xl font-semibold">231</p>
+          <p className="text-[35px] font-[500]">231</p>
         </div>
         <div className="bg-white flex flex-col gap-[16px]  p-[20px] w-full rounded-[8px]  shadow-sm">
-          <p className="text-[#4d4d4d]">Online Orders</p>
-          <p className="text-2xl font-semibold">231</p>
+          <p className="text-[#4d4d4d]">Amount received</p>
+          <p className="text-[35px] font-[500]">Rs 23,876,908.12</p>
         </div>
       </div>
     </div>
