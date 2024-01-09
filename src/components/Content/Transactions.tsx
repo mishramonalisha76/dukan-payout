@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiSortAlt2 } from "react-icons/bi";
 import { CiCircleInfo } from "react-icons/ci";
 import { FiDownload } from "react-icons/fi";
@@ -7,6 +7,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
 export const Transactions = () => {
+  const [selectedPage, setSelectedPage] = useState("10");
   const orders = [
     {
       id: "#234567",
@@ -74,6 +75,19 @@ export const Transactions = () => {
       amount: "Rs1,234.76",
       fee: "Rs23",
     },
+  ];
+  const pages = [
+    "1",
+    "...",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
   ];
   return (
     <div className="w-full  h-full flex   flex-col gap-5 px-[25px] pt-4">
@@ -146,21 +160,37 @@ export const Transactions = () => {
             </div>
           ))}
         </div>
-        <div className="flex w-[50%] justify-between mt-4">
-            <div className="flex gap-1   bg-white text-[#4d4d4d] items-center justify-between border-[1px] border-[#d9d9d9]
-          px-2 py-1 text-sm rounded-[4px]">
-              <IoIosArrowBack/>
-                Previous
-            </div>
-            <div>
+        <div className="flex w-[50%] justify-between mt-4 items-center text-sm">
+          <div
+            className="flex gap-1   bg-white text-[#4d4d4d] items-center justify-between border-[1px] border-[#d9d9d9]
+          px-2 py-1 text-sm rounded-[4px]"
+          >
+            <IoIosArrowBack />
+            Previous
+          </div>
 
-            </div>
-            <div className=" bg-white text-[#4d4d4d] flex gap-1 items-center justify-between border-[1px] border-[#d9d9d9]
-          px-2 py-1 text-sm rounded-[4px]">
-                Next
-                <IoIosArrowForward/>
-            </div>
+          {pages.map((page, i) => (
+            <span
+              onClick={() => setSelectedPage(page)}
+              key={`page${i}`}
+              className={`text-sm cursor-pointer
+             ${
+               selectedPage === page
+                 ? "bg-[#146EB4] rounded-[4px] px-1 py-[0.9px] text-white"
+                 : ""
+             }`}
+            >
+              {page}
+            </span>
+          ))}
 
+          <div
+            className=" bg-white text-[#4d4d4d] flex gap-1 items-center justify-between border-[1px] border-[#d9d9d9]
+          px-2 py-1 text-sm rounded-[4px]"
+          >
+            Next
+            <IoIosArrowForward />
+          </div>
         </div>
       </div>
     </div>
