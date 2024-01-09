@@ -162,7 +162,7 @@ export const Transactions = () => {
         </div>
         <div className="flex w-[50%] justify-between mt-4 items-center text-sm">
           <div
-            className="flex gap-1   bg-white text-[#4d4d4d] items-center justify-between border-[1px] border-[#d9d9d9]
+            className="flex gap-1 cursor-pointer  bg-white text-[#4d4d4d] items-center justify-between border-[1px] border-[#d9d9d9]
           px-2 py-1 text-sm rounded-[4px]"
           >
             <IoIosArrowBack />
@@ -186,7 +186,7 @@ export const Transactions = () => {
 
           <div
             className=" bg-white text-[#4d4d4d] flex gap-1 items-center justify-between border-[1px] border-[#d9d9d9]
-          px-2 py-1 text-sm rounded-[4px]"
+          px-2 py-1 text-sm rounded-[4px] cursor-pointer "
           >
             Next
             <IoIosArrowForward />
